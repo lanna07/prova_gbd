@@ -14,12 +14,12 @@ function adicionar() {
         $numero = $_POST["numero"];
         $complemento = $_POST["complemento"];
         $bairro = $_POST["bairro"];
-        $CEP = $_POST;
+        $CEP = $_POST["cep"];
         $cidade = $_POST["cidade"];
-        $UF = $_POST["UF"];
-        $IE = $_POST["IE"];
+        $UF = $_POST["uf"];
+        $IE = $_POST["ie"];
         
-        $msg = adicionarUsuario($nome, $email, $senha);
+        $msg = adicionarCliente($nome, $logradouro, $numero, $complemento, $bairro, $CEP, $cidade, $UF, $IE);
         echo $msg;
         redirecionar("usuario/index");
     } else {
